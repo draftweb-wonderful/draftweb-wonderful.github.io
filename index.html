@@ -401,53 +401,52 @@ pre {
 <div class="container">
     <div class="paper-title">
     <h1> 
-        Compositional Foundation Models for Hierarchical Planning
+        Solving Robotics Problems in Zero-Shot with Vision-Language Models
     </div>
 
-    <div id="authors">
+<div id="authors">
         <center>
             <div class="author-row-new">
-                <a href="https://anuragajay.github.io/">Anurag Ajay*<sup>1,2</sup></a>,
-                <a href="https://blackswhan.com/">Seungwook Han*<sup>1,2,3</sup></a>,
-                <a href="https://yilundu.github.io/">Yilun Du*<sup>2</sup></a>,
-                <a href="https://people.csail.mit.edu/lishuang/">Shuang Li<sup>2</sup></a>,
-                <a href="https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en">Abhi Gupta<sup>2</sup></a>,
-                <a href="http://people.csail.mit.edu/tommi/">Tommi Jaakkola<sup>2</sup></a>,
-                <a href="https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en">Joshua B. Tenenbaum<sup>2</sup></a>,
-                <a href="https://people.csail.mit.edu/lpk/">Leslie Kaelbling<sup>2</sup></a>,
-                <a href="https://akashgit.github.io/">Akash Srivastava<sup>3</sup></a>,
-                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal<sup>1,2</sup></a>
+                Anonymous Authors
+            </div>
+            
+
+<!--     <div id="authors">
+        <center>
+            <div class="author-row-new">
+                Zidan Wang *<sup>1</sup>,
+                Rui Shen *<sup>2</sup>,
+                Bradly Stadie *<sup>1</sup>
             </div>
         </center>
         <center>
         <div class="affiliations">
-            <span><sup>1</sup> Improbable AI Lab</span>
-            <span><sup>2</sup> MIT</span><br/>
-            <span><sup>3</sup> MIT-IBM Watson AI Lab</span><br/>
+            <span><sup>1</sup> Northwestern University </span>
+            <span><sup>2</sup> Yale University</span><br/>
         </div>
 
-        <br>*indicates equal contribution.
+        <br>*indicates equal contribution. -->
 
         <div class="affil-row">
-            <div class="venue text-center"><b>NeurIPS 2023</b></div>
+            <div class="venue text-center"><b>In Submission</b></div>
         </div>
 
         </center>
 
-        <div style="clear: both">
+<!--         <div style="clear: both">
             <div class="paper-btn-parent">
-            <a class="paper-btn" href="https://arxiv.org/abs/2309.08587">
+            <a class="paper-btn" href="To be Replaced by arxiv link">
                 <span class="material-icons"> description </span> 
                  Paper
             </a>
             <div class="paper-btn-coming-soon">
-                <a class="paper-btn" href="https://github.com/anuragajay/hip/tree/main">
+                <a class="paper-btn" href="To be Replaced by Github link">
                     <span class="material-icons"> code </span>
                     Code
                 </a>
             </div>
         </div></div>
-    </div>
+    </div> -->
 
     
     <!-- <section id="teaser-image">
@@ -487,7 +486,7 @@ pre {
         <h2>Abstract</h2>
         <div class="flex-row">
             <p>
-                To make effective decisions in novel environments with long-horizon goals, it is crucial to engage in hierarchical reasoning across spatial and temporal scales. This entails planning abstract subgoal sequences, visually reasoning about the underlying plans, and executing actions in accordance with the devised plan through visual-motor control. We propose <i>Compositional Foundation Models for Hierarchical Planning</i> (<TT>HiP</TT>), a foundation model that leverages different modalities of knowledge to solve long-horizon tasks by integrating the different levels of decision-making. We use a large language model to construct symbolic plans that are grounded in the environment through a large video diffusion model. Generated video plans are then grounded to visual-motor control, through  an inverse dynamics model that infers actions from generated videos. To enable effective reasoning within this hierarchy, we enforce consistency between the models via <i>iterative refinement</i>. We illustrate the efficacy and adaptability of our approach in three different long-horizon table-top manipulation tasks. 
+                We introduce Wonderful Team, a multi-agent visual LLM (VLLM) framework for solving robotics problems in the zero-shot regime. By zero-shot we mean that, for a novel environment, we feed a VLLM an image of the robot's environment and a description of the task, and have the VLLM output the sequence of actions necessary for the robot to complete the task. Prior work on VLLMs in robotics has largely focused on settings where some part of the pipeline is fine-tuned, such as tuning an LLM on robot data or training a separate vision encoder for perception and action generation. Surprisingly, due to recent advances in the capabilities of VLLMs, this type of fine-tuning may no longer be necessary for many tasks. In this work, we show that with careful engineering, we can prompt a single off-the-shelf VLLM to handle all aspects of a robotics task, from high-level planning to low-level location-extraction and action-execution. Wonderful Team builds on recent advances in multi-agent LLMs to partition tasks across an agent hierarchy, making it self-corrective and able to effectively partition and solve even long-horizon tasks. Extensive experiments on VIMABench demonstrate the system's capability to handle a variety of robotic tasks, including manipulation, visual goal-reaching, and visual reasoning, all in a zero-shot manner. These results underscore a key point: vision-language models have progressed rapidly in the past year, and should strongly be considered as a backbone for robotics problems going forward. 
             </p>
         </div>
     </section>
