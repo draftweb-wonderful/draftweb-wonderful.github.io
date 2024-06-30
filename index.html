@@ -478,9 +478,6 @@ pre {
         </center>
     </section>
     
-    
-
-    
     <section id="abstract"/>
         <hr>
         <h2>Abstract</h2>
@@ -490,6 +487,7 @@ pre {
             </p>
         </div>
     </section>
+    
     <section id="method"/>
         <hr>
         <h2>Compositional Foundation Models for Hierarchical Planning</h2>
@@ -653,177 +651,15 @@ pre {
         </div>
     </div>
 
-    <br>
-    <div class="section">
+    <section id="acknowledgement"/>
         <hr>
-        <h2>Related Works</h2>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="img/unipi.gif" alt="PontTuset" width="240" style="border-style: none">
-                </td>
-                <td width="75%" valign="middle">
-                  <a href="https://arxiv.org/pdf/2302.00111.pdf">
-                    <papertitle>Learning Universal Policies via Text-Guided Video Generation</papertitle>
-                  </a>
-                  <p> 
-                    We cast the sequential decision making problem as a text-conditioned video generation problem, where, given a text-encoded specification of a desired goal, a planner synthesizes a set of future frames depicting its planned actions in the future, and the actions will be extracted from the generated video. Our policy-as-video formulation can represent environments with different state and action spaces in a unified space of images, enabling learning and generalization across a wide range of robotic manipulation tasks.
-                  </p>
-                </td>
-        </tr>
-        <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="img/decisiondiff.gif" alt="PontTuset" width="240" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://openreview.net/pdf?id=sP1fo2K9DFG">
-                <papertitle>Is Conditional Generative Modeling all you need for Decision Making?</papertitle>
-              </a>
-              <p> 
-                We illustrate how conditional generative modeling is a powerful paradigm for decision-making, enabling us utilize a reward conditional model to effectively perform offline RL. We further illustrate how conditional generative modeling enables us to compose multiple different constraints and skills together.
-              </p>
-              <br>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="img/diffuser.gif" alt="PontTuset" width="240" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2205.09991">
-                <papertitle>Planning with Diffusion for Flexible Behavior Synthesis</papertitle>
-              </a>
-              <p> 
-                Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
-              </p>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="img/compose_pretrain.gif" alt="PontTuset" width="240" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2210.11522">
-                <papertitle>Composing Pretrained Models through Iterative Consensus</papertitle>
-              </a>
-              <p> 
-                We present a method to combine different large pretrained models together by having individual models communicate with each other through iterative consensus. We illustrate how this combination of models can do zero-shot VQA, image generation, reasoning, and image generation.
-              </p>
-            </td>
-        </tr>
-        </tbody></table>
-    </div>
-
-
-    <!-- <section id="paper">
-        <h2>Team</h2>        
-        <div class="row">
-            <div class="column5">
-                <a href='https://anuragajay.github.io/'>
-                    <img src=./materials/people/aajay2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname>Anurag Ajay</p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='https://yilundu.github.io/'>
-                    <img  src=./materials/people/yilun3.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Yilun Du </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en'>
-                    <img  src=./materials/people/abhi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Abhi Gupta </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en'>
-                    <img  src=./materials/people/josh2.jpg class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Joshua Tenenbaum </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='http://people.csail.mit.edu/tommi/'>
-                    <img  src=./materials/people/tommi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Tommi Jaakkola </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='http://people.csail.mit.edu/pulkit/'>
-                    <img  src=./materials/people/pulkit.jpeg class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Pulkit Agrawal </p>
-                <p class=institution>MIT</p>
-            </div>
-    </section> -->
-   
-    <!-- <section id="bibtex">
-        <h2>Bibtex</h2>
-        <div class="page-body"><pre id="ad6975be-3353-467d-ae48-6313d767ffa6" class="code"><code>
-            @inproceedings{
-                ajay2023is,
-                title={Is Conditional Generative Modeling all you need for Decision Making?},
-                author={Anurag Ajay and Yilun Du and Abhi Gupta and Joshua B. Tenenbaum and Tommi S. Jaakkola and Pulkit Agrawal},
-                booktitle={The Eleventh International Conference on Learning Representations },
-                year={2023},
-                url={https://openreview.net/forum?id=sP1fo2K9DFG}
-            }    
-        </code></pre><p id="1a3aa306-c4b8-4872-8fb0-411495c73d55" class="">
-        </p></div>
-
-    </section> -->
-
-
-<!-- 
-    <section id="paper">
-        <h2>Paper</h2>
-        <hr>
+        <h2>Acknowledgement</h2>
         <div class="flex-row">
-            <div class="download-thumb">
-            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
-                <a href="https://energy-based-model.github.io/composing-pretrained-models/"><img class="screenshot" src="materials/thumb_finger.png"></a>
-            </div>
-        </div>
-            <div class="paper-stuff">
-                <p><b>Composing Ensembles of Pre-trained Models via Iterative Consensus</b></p>
-                <p>Shuang Li, Yilun Du, Joshua B. Tenenbaum, Antonio Torralba, Igor Mordatch</p>
-                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2210.06978"> arXiv version</a></div>
-                <div><span class="material-icons"> integration_instructions </span><a href="https://github.com/nv-tlabs/LION"> Code</a></div>
-            </div>
-            </div>
+            <p>
+                Special thanks to 
+            </p>
         </div>
     </section>
-
- -->
-
-    <!-- <section id="bibtex">
-        <h2>Citation</h2>
-        <hr>
-        <pre><code>@inproceedings{zeng2022lion,
-            title={LION: Latent Point Diffusion Models for 3D Shape Generation},
-            author={Xiaohui Zeng and Arash Vahdat and Francis Williams and Zan Gojcic and Or Litany and Sanja Fidler and Karsten Kreis},
-            booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-            year={2022}
-        }</code></pre>
-    </section> -->
-
-    <section>
-        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
-        <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center>
-    </section>
-    
-
-
 </div>
 </body>
 </html>
