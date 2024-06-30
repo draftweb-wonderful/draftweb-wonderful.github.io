@@ -1,0 +1,830 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 26px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 12px;
+}
+
+.affiliations-new {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+    margin: 0.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title>Compositional Foundation Models for Hierarchical Planning</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="Hierarchical Planning with Foundation Models"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:title" content="Compositional Foundation Models for Hierarchical Planning">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+    </head>
+
+ <body>
+
+
+<div class="container">
+    <div class="paper-title">
+    <h1> 
+        Compositional Foundation Models for Hierarchical Planning
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                <a href="https://anuragajay.github.io/">Anurag Ajay*<sup>1,2</sup></a>,
+                <a href="https://blackswhan.com/">Seungwook Han*<sup>1,2,3</sup></a>,
+                <a href="https://yilundu.github.io/">Yilun Du*<sup>2</sup></a>,
+                <a href="https://people.csail.mit.edu/lishuang/">Shuang Li<sup>2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en">Abhi Gupta<sup>2</sup></a>,
+                <a href="http://people.csail.mit.edu/tommi/">Tommi Jaakkola<sup>2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en">Joshua B. Tenenbaum<sup>2</sup></a>,
+                <a href="https://people.csail.mit.edu/lpk/">Leslie Kaelbling<sup>2</sup></a>,
+                <a href="https://akashgit.github.io/">Akash Srivastava<sup>3</sup></a>,
+                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal<sup>1,2</sup></a>
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup> Improbable AI Lab</span>
+            <span><sup>2</sup> MIT</span><br/>
+            <span><sup>3</sup> MIT-IBM Watson AI Lab</span><br/>
+        </div>
+
+        <br>*indicates equal contribution.
+
+        <div class="affil-row">
+            <div class="venue text-center"><b>NeurIPS 2023</b></div>
+        </div>
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="https://arxiv.org/abs/2309.08587">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <div class="paper-btn-coming-soon">
+                <a class="paper-btn" href="https://github.com/anuragajay/hip/tree/main">
+                    <span class="material-icons"> code </span>
+                    Code
+                </a>
+            </div>
+        </div></div>
+    </div>
+
+    
+    <!-- <section id="teaser-image">
+        <center>
+            <figure>
+                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                    <source src="assets/LION_video_v10.mp4#t=0.001" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+
+        </center>
+    </section>
+     -->
+
+
+    <br>
+    
+    <section id="teaser-image">
+        <center>
+<!--            <center><p><b>A unified framework for composing pre-trained models.</b></p></center>-->
+
+            <figure>
+               <video width="800" loop autoplay muted>
+                   <source src="img/hip_teaser_intro.m4v" type="video/mp4">
+               </video>
+            </figure>
+
+        </center>
+    </section>
+    
+    
+
+    
+    <section id="abstract"/>
+        <hr>
+        <h2>Abstract</h2>
+        <div class="flex-row">
+            <p>
+                To make effective decisions in novel environments with long-horizon goals, it is crucial to engage in hierarchical reasoning across spatial and temporal scales. This entails planning abstract subgoal sequences, visually reasoning about the underlying plans, and executing actions in accordance with the devised plan through visual-motor control. We propose <i>Compositional Foundation Models for Hierarchical Planning</i> (<TT>HiP</TT>), a foundation model that leverages different modalities of knowledge to solve long-horizon tasks by integrating the different levels of decision-making. We use a large language model to construct symbolic plans that are grounded in the environment through a large video diffusion model. Generated video plans are then grounded to visual-motor control, through  an inverse dynamics model that infers actions from generated videos. To enable effective reasoning within this hierarchy, we enforce consistency between the models via <i>iterative refinement</i>. We illustrate the efficacy and adaptability of our approach in three different long-horizon table-top manipulation tasks. 
+            </p>
+        </div>
+    </section>
+    <section id="method"/>
+        <hr>
+        <h2>Compositional Foundation Models for Hierarchical Planning</h2>
+            <figure>
+                <video width="800" loop autoplay muted>
+                    <source src="img/hip_teaser_plan.m4v" type="video/mp4">
+                </video>
+            </figure>
+            <div class="flex-row">
+                <p>
+                We propose <i>Compositional Foundation Models for Hierarchical Planning</i> (<TT>HiP</TT>), a foundation model composed of different <i>expert</i> models. Each of these models is trained on different modalities of existing Internet data and jointly construct a physically executable plan to solve long-horizon tasks. 
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Task Planning With Large Language Models</b> Large language models are trained on a vast amount of data on the Internet, and captures powerful semantic priors on what steps would be reasonable to take to accomplish a particular task. Given a task specified in language and the current observation, we use a pretrained LLM as a plan proposer, which outputs language subgoal decompositions to achieve a final goal.
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Visual Planning With Video Models</b> Text-to-video models are trained on a vast amount of video information, and captures information about the physics of objects and the semantics of how objects should move to accomplish different tasks. We leverage text-to-video model as a visual plan proposer, which generates different plausible observation trajectories conditioned on current observation and a given subgoal. 
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Action Planning Through Inverse Dynamics</b> The egocentric images on the internet images provide a powerful visual prior for inferring inverse dynamics. Our action planner uses an existing pretrained vision model on egocentric images and generates plausible different action plans to execute a visual plan. 
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Iterative Refinement for Hierarchical Plan Generation</b> Given different task, visual, and action proposal models, we leverage iterative refinement as a planner to obtain a plan that satisfies constraints across all three levels of foundation models.                 </p>
+            </div>
+    </section>
+
+    <section id="results_overview"/>
+    <hr>
+    <h2>Results Overview</h2>
+        <br><br>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="img/slice.png" style="width:950px"></center>
+        </div>
+        <i><center>Note that SayCan isn't applicable to Kitchen tasks domain</center></i>
+    </section>
+        
+
+    <div class="section">
+        <hr>
+        <h2>Visualization of Successful HiP Execution</h2>
+        <br>
+        <h3>Paint Block Results</h3>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/paint_block_1_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Place purple block left of yellow block and cyan block right of yellow block</p>
+                </div>
+            </div> 
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/paint_block_2_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Stack red block on top of brown block and place yellow block to the left of the stack</p>
+                </div>
+            </div> 
+        </div>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/paint_block_3_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Stack brown block on top of pink block and place cyan block to the left of the stack</p>
+                </div>
+            </div> 
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/paint_block_4_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Stack orange block on top of red block and place purple block to the right of the stack</p>
+                </div>
+            </div> 
+        </div>
+        <br><br>
+        <h3>Object Arrange Results</h3>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/object_arrange_1_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Pack spiderman figure, frypan, nintendo 3ds, red and white striped towel in brown box</p>
+                </div>
+            </div> 
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/object_arrange_2_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Pack butterfinger chocolate, porcelain salad plate, porcelain spoon, green and white striped towel in brown box</p>
+                </div>
+            </div> 
+        </div>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/object_arrange_3_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Pack spiderman figure, porcelain salad plate, nintendo cartridge, hammer in brown box</p>
+                </div>
+            </div> 
+            <div class="col justify-content-center text-center">
+                <video width="80%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/object_arrange_4_cap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Pack crayon box, ball puzzle, hammer, red and white striped towel in brown box</p>
+                </div>
+            </div> 
+        </div>
+        <h3>Kitchen Tasks Results</h3>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/kitchen_task_1.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Open microwave, move kettle out of the way, light the kitchen area, and open upper right drawer</p>
+                </div>
+            </div> 
+            <div class="col justify-content-center text-center">
+                <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/kitchen_task_3.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Open microwave, switch on the back stove, light the kitchen area, and open upper left drawer</p>
+                </div>
+            </div> 
+        </div>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/kitchen_task_4.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Open microwave, switch on the front and back stove, and open upper right drawer</p>
+                </div>
+            </div> 
+            <div class="col justify-content-center text-center">
+                <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/kitchen_task_2.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Goal:</b> Move kettle out of the way, switch on the front stove, light the kitchen area, and open upper left drawer</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <br>
+    <div class="section">
+        <hr>
+        <h2>Related Works</h2>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="img/unipi.gif" alt="PontTuset" width="240" style="border-style: none">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://arxiv.org/pdf/2302.00111.pdf">
+                    <papertitle>Learning Universal Policies via Text-Guided Video Generation</papertitle>
+                  </a>
+                  <p> 
+                    We cast the sequential decision making problem as a text-conditioned video generation problem, where, given a text-encoded specification of a desired goal, a planner synthesizes a set of future frames depicting its planned actions in the future, and the actions will be extracted from the generated video. Our policy-as-video formulation can represent environments with different state and action spaces in a unified space of images, enabling learning and generalization across a wide range of robotic manipulation tasks.
+                  </p>
+                </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/decisiondiff.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://openreview.net/pdf?id=sP1fo2K9DFG">
+                <papertitle>Is Conditional Generative Modeling all you need for Decision Making?</papertitle>
+              </a>
+              <p> 
+                We illustrate how conditional generative modeling is a powerful paradigm for decision-making, enabling us utilize a reward conditional model to effectively perform offline RL. We further illustrate how conditional generative modeling enables us to compose multiple different constraints and skills together.
+              </p>
+              <br>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/diffuser.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2205.09991">
+                <papertitle>Planning with Diffusion for Flexible Behavior Synthesis</papertitle>
+              </a>
+              <p> 
+                Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
+              </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/compose_pretrain.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2210.11522">
+                <papertitle>Composing Pretrained Models through Iterative Consensus</papertitle>
+              </a>
+              <p> 
+                We present a method to combine different large pretrained models together by having individual models communicate with each other through iterative consensus. We illustrate how this combination of models can do zero-shot VQA, image generation, reasoning, and image generation.
+              </p>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+
+    <!-- <section id="paper">
+        <h2>Team</h2>        
+        <div class="row">
+            <div class="column5">
+                <a href='https://anuragajay.github.io/'>
+                    <img src=./materials/people/aajay2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname>Anurag Ajay</p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='https://yilundu.github.io/'>
+                    <img  src=./materials/people/yilun3.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Yilun Du </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en'>
+                    <img  src=./materials/people/abhi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Abhi Gupta </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en'>
+                    <img  src=./materials/people/josh2.jpg class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Joshua Tenenbaum </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='http://people.csail.mit.edu/tommi/'>
+                    <img  src=./materials/people/tommi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Tommi Jaakkola </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='http://people.csail.mit.edu/pulkit/'>
+                    <img  src=./materials/people/pulkit.jpeg class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Pulkit Agrawal </p>
+                <p class=institution>MIT</p>
+            </div>
+    </section> -->
+   
+    <!-- <section id="bibtex">
+        <h2>Bibtex</h2>
+        <div class="page-body"><pre id="ad6975be-3353-467d-ae48-6313d767ffa6" class="code"><code>
+            @inproceedings{
+                ajay2023is,
+                title={Is Conditional Generative Modeling all you need for Decision Making?},
+                author={Anurag Ajay and Yilun Du and Abhi Gupta and Joshua B. Tenenbaum and Tommi S. Jaakkola and Pulkit Agrawal},
+                booktitle={The Eleventh International Conference on Learning Representations },
+                year={2023},
+                url={https://openreview.net/forum?id=sP1fo2K9DFG}
+            }    
+        </code></pre><p id="1a3aa306-c4b8-4872-8fb0-411495c73d55" class="">
+        </p></div>
+
+    </section> -->
+
+
+<!-- 
+    <section id="paper">
+        <h2>Paper</h2>
+        <hr>
+        <div class="flex-row">
+            <div class="download-thumb">
+            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
+                <a href="https://energy-based-model.github.io/composing-pretrained-models/"><img class="screenshot" src="materials/thumb_finger.png"></a>
+            </div>
+        </div>
+            <div class="paper-stuff">
+                <p><b>Composing Ensembles of Pre-trained Models via Iterative Consensus</b></p>
+                <p>Shuang Li, Yilun Du, Joshua B. Tenenbaum, Antonio Torralba, Igor Mordatch</p>
+                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2210.06978"> arXiv version</a></div>
+                <div><span class="material-icons"> integration_instructions </span><a href="https://github.com/nv-tlabs/LION"> Code</a></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+ -->
+
+    <!-- <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@inproceedings{zeng2022lion,
+            title={LION: Latent Point Diffusion Models for 3D Shape Generation},
+            author={Xiaohui Zeng and Arash Vahdat and Francis Williams and Zan Gojcic and Or Litany and Sanja Fidler and Karsten Kreis},
+            booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+            year={2022}
+        }</code></pre>
+    </section> -->
+
+    <section>
+        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
+        <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center>
+    </section>
+    
+
+
+</div>
+</body>
+</html>
