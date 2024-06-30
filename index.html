@@ -352,51 +352,18 @@ pre {
   line-height: 1;
 }
 
+
+
+
+
+
+
+
 .rounded-circle {
   border-radius: 50% !important;
 }
 
-/* New styles for the interactive video plan */
-.interactive-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-.interactive-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 10px;
-    width: 100%;
-}
-.interactive-card {
-    padding: 20px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-}
-.video-container {
-    width: 100%;
-}
-.examples {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-.dot {
-    height: 15px;
-    width: 15px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-.dot.active {
-    background-color: #000;
-}
-</style>
+
 
 
 
@@ -565,48 +532,7 @@ pre {
         <i><center>Note that SayCan isn't applicable to Kitchen tasks domain</center></i>
     </section>
         
-    <!-- New Interactive Video Plan Section -->
-    <div class="interactive-container">
-        <div class="interactive-grid">
-            <div class="interactive-card">
-                <h5 class="card-header">Initial Frame</h5>
-                <p>Initial frame description or image.</p>
-            </div>
-            <div class="interactive-card">
-                <h5 class="card-header">Reasoning</h5>
-                <p>Reasoning behind the action.</p>
-            </div>
-            <div class="interactive-card">
-                <h5 class="card-header">The bar to click to view relevant part</h5>
-                <p>Generated Language Plan (Click to view relevant part of video plan!):</p>
-                <select class="form-select" size="5" aria-label="size 5 select example" id="video-timestamp-select">
-                    <option value="5">5) Push the blue crescent and yellow star into the blue cube</option>
-                    <option value="10">6) Push the yellow star and blue cube to the top right corner</option>
-                    <option value="15">7) Push the blue crescent with the help of the blue cube towards the top right corner of the board</option>
-                    <option value="20">8) Push the yellow pentagon towards the top right of the board</option>
-                    <option value="25">9) Push the yellow pentagon into the yellow star</option>
-                    <option value="30">10) Move the arm towards the red pentagon</option>
-                </select>
-                <br>
-                <div class="video-container">
-                    <video id="vid_fractal" width="100%" preload="metadata" playsinline controls>
-                        <source src="media/aloha.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="interactive-card">
-                <h5 class="card-header">Actual Video Execution</h5>
-                <p>Video execution details or description.</p>
-            </div>
-        </div>
-        <div class="examples">
-            <div class="dot" onclick="showExample(1)"></div>
-            <div class="dot" onclick="showExample(2)"></div>
-            <div class="dot" onclick="showExample(3)"></div>
-        </div>
-        <p>More examples using the same prompt and in the same environment.</p>
-    </div>
-    
+
     <div class="section">
         <hr>
         <h2>Visualization of Successful HiP Execution</h2>
