@@ -423,8 +423,6 @@ pre {
             max-width: 100%;
             height: auto;
         }
-        </style>
-        <style>
         .row {
             flex-wrap: nowrap; /* Ensure items stay on a single row */
             overflow-x: auto; /* Add horizontal scroll for small screens */
@@ -437,39 +435,21 @@ pre {
             flex: 0 0 100%;
             max-width: 100%;
         }
-        </style>
-        <style>
-        .video-container, .image-container {
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: center;
+        }
+        .scroll-container {
+            display: flex;
+            align-items: center;
+            position: relative;
         }
         .row {
+            display: flex;
             flex-wrap: nowrap; /* Ensure items stay on a single row */
-            overflow-x: auto; /* Add horizontal scroll for small screens */
+            overflow-x: scroll; /* Always show horizontal scroll */
             -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-            position: relative; /* Needed for arrow positioning */
-        }
-        .col-6, .col-sm-4, .col-md-2 {
-            flex: 0 0 auto; /* Prevent items from growing */
-            max-width: 100%;
-        }
-        .scroll-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            color: #888;
-            pointer-events: none; /* Prevent interaction */
-        }
-        .scroll-arrow-left {
-            left: 0;
-        }
-        .scroll-arrow-right {
-            right: 0;
         }
         .row::-webkit-scrollbar {
             height: 12px; /* Adjust the scrollbar height */
+            display: block; /* Always display the scrollbar */
         }
         .row::-webkit-scrollbar-thumb {
             background-color: #888; /* Change the scrollbar color */
@@ -478,24 +458,21 @@ pre {
         .row::-webkit-scrollbar-track {
             background: #f1f1f1; /* Change the track color */
         }
-        .row::before, .row::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 20px;
-            pointer-events: none;
-            z-index: 1;
+        .col-6, .col-sm-4, .col-md-2 {
+            flex: 0 0 auto; /* Prevent items from growing */
+            max-width: 100%;
         }
-        .row::before {
-            left: 0;
-            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-        }
-        .row::after {
-            right: 0;
-            background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        /* Adjust sizes for small screens */
+        @media (max-width: 768px) {
+            .col-6 img, .col-sm-4 img, .col-md-2 img {
+                height: 60px; /* Reduce image height for small screens */
+            }
+            .col-6 h4, .col-sm-4 h4, .col-md-2 h4 {
+                font-size: 1rem; /* Reduce font size for small screens */
+            }
         }
         </style>
+</head>
     </head>
 
  <body>
@@ -593,46 +570,46 @@ pre {
         <hr>
         <h2>Execution Examples</h2>
 
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="scroll-arrow scroll-arrow-left">&#9664;</div>
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <a href="#fruit_placement">
-                        <img src="media/color_fruit_4.png" style="height: 80px;">
-                        <h4><strong>Fruit Placement</strong></h4>
-                    </a>
+    <div class="container">
+            <div class="scroll-container">
+                <div class="row justify-content-md-center">
+                    <div class="col-6 col-sm-4 col-md-2 text-center">
+                        <a href="#fruit_placement">
+                            <img src="media/color_fruit_4.png" style="height: 80px;">
+                            <h4><strong>Fruit Placement</strong></h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 text-center">
+                        <a href="#price_rank">
+                            <img src="media/price_rank_1.png" style="height: 80px;">
+                            <h4><strong>Price Ranking</strong></h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 text-center">
+                        <a href="#superhero">
+                            <img src="media/super_hero_1.png" style="height: 80px;">
+                            <h4><strong>Superhero</strong></h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 text-center">
+                        <a href="#same_texture">
+                            <img src="media/same_texture.png" style="height: 80px;">
+                            <h4><strong>Same Texture</strong></h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 text-center">
+                        <a href="#same_shape">
+                            <img src="media/same_shape.png" style="height: 80px;">
+                            <h4><strong>Same Shape</strong></h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 text-center">
+                        <a href="#pick_restore">
+                            <img src="media/pick_restore.png" style="height: 80px;">
+                            <h4><strong>Pick & Restore</strong></h4>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <a href="#price_rank">
-                        <img src="media/price_rank_1.png" style="height: 80px;">
-                        <h4><strong>Price Ranking</strong></h4>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <a href="#superhero">
-                        <img src="media/super_hero_1.png" style="height: 80px;">
-                        <h4><strong>Superhero</strong></h4>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <a href="#same_texture">
-                        <img src="media/same_texture.png" style="height: 80px;">
-                        <h4><strong>Same Texture</strong></h4>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <a href="#same_shape">
-                        <img src="media/same_shape.png" style="height: 80px;">
-                        <h4><strong>Same Shape</strong></h4>
-                    </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-2 text-center">
-                    <a href="#pick_restore">
-                        <img src="media/pick_restore.png" style="height: 80px;">
-                        <h4><strong>Pick & Restore</strong></h4>
-                    </a>
-                </div>
-                <div class="scroll-arrow scroll-arrow-right">&#9654;</div>
             </div>
         </div>
 
