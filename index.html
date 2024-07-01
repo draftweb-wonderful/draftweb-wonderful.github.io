@@ -438,6 +438,64 @@ pre {
             max-width: 100%;
         }
         </style>
+        <style>
+        .video-container, .image-container {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .row {
+            flex-wrap: nowrap; /* Ensure items stay on a single row */
+            overflow-x: auto; /* Add horizontal scroll for small screens */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            position: relative; /* Needed for arrow positioning */
+        }
+        .col-6, .col-sm-4, .col-md-2 {
+            flex: 0 0 auto; /* Prevent items from growing */
+            max-width: 100%;
+        }
+        .scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #888;
+            pointer-events: none; /* Prevent interaction */
+        }
+        .scroll-arrow-left {
+            left: 0;
+        }
+        .scroll-arrow-right {
+            right: 0;
+        }
+        .row::-webkit-scrollbar {
+            height: 12px; /* Adjust the scrollbar height */
+        }
+        .row::-webkit-scrollbar-thumb {
+            background-color: #888; /* Change the scrollbar color */
+            border-radius: 10px; /* Add rounded corners to the scrollbar */
+        }
+        .row::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Change the track color */
+        }
+        .row::before, .row::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .row::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+        .row::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+        </style>
     </head>
 
  <body>
@@ -537,6 +595,7 @@ pre {
 
         <div class="container">
             <div class="row justify-content-md-center">
+                <div class="scroll-arrow scroll-arrow-left">&#9664;</div>
                 <div class="col-6 col-sm-4 col-md-2 text-center">
                     <a href="#fruit_placement">
                         <img src="media/color_fruit_4.png" style="height: 80px;">
@@ -573,6 +632,7 @@ pre {
                         <h4><strong>Pick & Restore</strong></h4>
                     </a>
                 </div>
+                <div class="scroll-arrow scroll-arrow-right">&#9654;</div>
             </div>
         </div>
 
