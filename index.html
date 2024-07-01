@@ -3,7 +3,7 @@
 <html>
 
 <script src="bootstrap.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <style type="text/css">
@@ -96,8 +96,8 @@ section {
     font-size: 26px;
 }
 
-.author-row-new { 
-    text-align: center; 
+.author-row-new {
+    text-align: center;
 }
 
 .author-row-new a {
@@ -135,7 +135,7 @@ section {
     max-width: 100%;
 }
 .text-center {
-    text-align: center;  
+    text-align: center;
 }
 .screenshot {
     width: 256px;
@@ -146,7 +146,7 @@ section {
 }
 hr {
     height: 1px;
-    border: 0; 
+    border: 0;
     border-top: 1px solid #ddd;
     margin: 0;
 }
@@ -199,7 +199,7 @@ figure {
 }
 
 .paper-btn-coming-soon {
-    position: relative; 
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -221,7 +221,7 @@ figure {
   border-width: 0;
   outline: none;
   border-radius: 2px;
-  
+
   background-color: #5364cc;
   color: white !important;
   font-size: 20px;
@@ -418,7 +418,7 @@ pre {
 
 <div class="container">
     <div class="paper-title">
-    <h1> 
+    <h1>
         Solving Robotics Problems in Zero-Shot with Vision-Language Models
     </div>
 
@@ -427,7 +427,7 @@ pre {
             <div class="author-row-new">
                 Anonymous Authors
             </div>
-            
+
 
 <!--     <div id="authors">
         <center>
@@ -454,7 +454,7 @@ pre {
 <!--         <div style="clear: both">
             <div class="paper-btn-parent">
             <a class="paper-btn" href="To be Replaced by arxiv link">
-                <span class="material-icons"> description </span> 
+                <span class="material-icons"> description </span>
                  Paper
             </a>
             <div class="paper-btn-coming-soon">
@@ -475,11 +475,11 @@ pre {
         <h2>Abstract</h2>
         <div class="flex-row">
             <p>
-                We introduce <i>Wonderful Team</i>, a multi-agent visual LLM (VLLM) framework for solving robotics problems in the zero-shot regime. By zero-shot we mean that, for a novel environment, we feed a VLLM an image of the robot's environment and a description of the task, and have the VLLM output the sequence of actions necessary for the robot to complete the task. Prior work on VLLMs in robotics has largely focused on settings where some part of the pipeline is fine-tuned, such as tuning an LLM on robot data or training a separate vision encoder for perception and action generation. Surprisingly, due to recent advances in the capabilities of VLLMs, this type of fine-tuning may no longer be necessary for many tasks. In this work, we show that with careful engineering, we can prompt a single off-the-shelf VLLM to handle all aspects of a robotics task, from high-level planning to low-level location-extraction and action-execution. <i>Wonderful Team</i> builds on recent advances in multi-agent LLMs to partition tasks across an agent hierarchy, making it self-corrective and able to effectively partition and solve even long-horizon tasks. Extensive experiments on both real and simulated environments demonstrate the system's capability to handle a variety of robotic tasks, including manipulation, visual goal-reaching, and visual reasoning, all in a zero-shot manner. These results underscore a key point: vision-language models have progressed rapidly in the past year, and should strongly be considered as a backbone for robotics problems going forward. 
+                We introduce <i>Wonderful Team</i>, a multi-agent visual LLM (VLLM) framework for solving robotics problems in the zero-shot regime. By zero-shot we mean that, for a novel environment, we feed a VLLM an image of the robot's environment and a description of the task, and have the VLLM output the sequence of actions necessary for the robot to complete the task. Prior work on VLLMs in robotics has largely focused on settings where some part of the pipeline is fine-tuned, such as tuning an LLM on robot data or training a separate vision encoder for perception and action generation. Surprisingly, due to recent advances in the capabilities of VLLMs, this type of fine-tuning may no longer be necessary for many tasks. In this work, we show that with careful engineering, we can prompt a single off-the-shelf VLLM to handle all aspects of a robotics task, from high-level planning to low-level location-extraction and action-execution. <i>Wonderful Team</i> builds on recent advances in multi-agent LLMs to partition tasks across an agent hierarchy, making it self-corrective and able to effectively partition and solve even long-horizon tasks. Extensive experiments on both real and simulated environments demonstrate the system's capability to handle a variety of robotic tasks, including manipulation, visual goal-reaching, and visual reasoning, all in a zero-shot manner. These results underscore a key point: vision-language models have progressed rapidly in the past year, and should strongly be considered as a backbone for robotics problems going forward.
             </p>
         </div>
     </section>
-    
+
     <section id="method"/>
         <hr>
         <h2>Method</h2>
@@ -488,7 +488,7 @@ pre {
             </video>
             <div class="flex-row">
                 <p>
-                We propose <i>Wonderful Team</i>, a zero-shot, single-model, multi-agent system for solving visual robotics tasks. Taking inspiration from recent advances in the multi-agent LLM literature, our system employs specialized agents to collaboratively manage different task aspects, from high-level planning to low-level execution, within a single integrated system. In particular, we develop a multi-agent LLM system wherein each agent is responsible for a separate component of task execution: including planning, object identification and location, action proposal, memory, and self-correction. 
+                We propose <i>Wonderful Team</i>, a zero-shot, single-model, multi-agent system for solving visual robotics tasks. Taking inspiration from recent advances in the multi-agent LLM literature, our system employs specialized agents to collaboratively manage different task aspects, from high-level planning to low-level execution, within a single integrated system. In particular, we develop a multi-agent LLM system wherein each agent is responsible for a separate component of task execution: including planning, object identification and location, action proposal, memory, and self-correction.
     </section>
 
     <section id="results_overview"/>
@@ -499,7 +499,7 @@ pre {
         </div>
         <i><center> Note that the results presented here are based on a selection of VIMABench tasks. For more information, please refer to the paper.</center></i>
     </section>
-        
+
 
     <div class="section">
         <center>
@@ -544,7 +544,7 @@ pre {
                 </a>
             </div>
         </div>
-        
+
         <h3 id="fruit_placement">[Real] Fruit Placement</h3>
         <div class="prompt-box">
             “Fruits and snacks of similar color make perfect companions. Distribute the unmatched items from the top left corner to the superheroes to help each of them have companion pairs.”
@@ -555,7 +555,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/color_fruit_1.mp4" type="video/mp4">
@@ -563,16 +563,16 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
-        
+
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <img src="media/color_fruit_2.png" style="width: 80%;">
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/color_fruit_2.mp4" type="video/mp4">
@@ -580,7 +580,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="row align-items-center">
@@ -589,7 +589,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/color_fruit_3.mp4" type="video/mp4">
@@ -597,7 +597,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="row align-items-center">
@@ -606,7 +606,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/color_fruit_4.mp4" type="video/mp4">
@@ -614,7 +614,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <h3 id="price_rank">[Real] Price Ranking</h3>
@@ -627,7 +627,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/price_rank_1.mp4" type="video/mp4">
@@ -635,24 +635,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
-        </div>
-        
-        <div class="row align-items-center">
-            <div class="col justify-content-center text-center">
-                <img src="media/price_rank_2.png" style="width: 80%;">
-                <div class="overlay">
-                    <p><b>Initial Frame</b></p>
-                </div>
-            </div> 
-            <div class="col justify-content-center text-center">
-                <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="media/price_rank_2.mp4" type="video/mp4">
-                </video>
-                <div class="overlay">
-                    <p><b>Execution Video</b></p>
-                </div>
-            </div> 
+            </div>
         </div>
 
         <div class="row align-items-center">
@@ -661,7 +644,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/price_rank_3.mp4" type="video/mp4">
@@ -669,7 +652,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="row align-items-center">
@@ -678,7 +661,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/price_rank_4.mp4" type="video/mp4">
@@ -686,11 +669,29 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="media/price_rank_2.png" style="width: 80%;">
+                <div class="overlay">
+                    <p><b>Initial Frame</b></p>
+                </div>
+            </div>
+            <div class="col justify-content-center text-center">
+                <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="media/price_rank_2.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <p><b>Execution Video</b></p>
+                </div>
+            </div>
+        </div>
+
+
         <h3 id="superhero">[Real] Superhero Companions</h3>
-        <div class="prompt-box"> 
+        <div class="prompt-box">
             “Fruits and snacks of similar color make perfect companions. Distribute the unmatched items from the top left corner to the superheroes to help each of them have companion pairs.”        </div>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
@@ -698,7 +699,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/super_hero_1.mp4" type="video/mp4">
@@ -706,16 +707,16 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
-        
+
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <img src="media/super_hero_2.png" style="width: 80%;">
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/super_hero_2.mp4" type="video/mp4">
@@ -723,7 +724,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="row align-items-center">
@@ -732,7 +733,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/super_hero_3.mp4" type="video/mp4">
@@ -740,7 +741,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div class="row align-items-center">
@@ -749,7 +750,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="87.8%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/super_hero_4.mp4" type="video/mp4">
@@ -757,7 +758,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <h3 id="same_texture">[Sim] Same Texture</h3>
@@ -770,7 +771,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="86%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/same_texture_1.mp4" type="video/mp4">
@@ -778,16 +779,16 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
-        
+
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <img src="media/same_texture_2.png" style="width: 85%;">
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="86%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/same_texture_2.mp4" type="video/mp4">
@@ -795,7 +796,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <h3 id="same_shape">[Sim] Same Shape</h3>
@@ -808,7 +809,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="86%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/same_shape_1.mp4" type="video/mp4">
@@ -816,16 +817,16 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
-        
+
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <img src="media/same_shape_2.png" style="width: 85%;">
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="86%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/same_shape_2.mp4" type="video/mp4">
@@ -833,7 +834,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <h3 id="pick_restore">[Sim] Pick & Restore</h3>
@@ -846,7 +847,7 @@ pre {
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="86%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/pick_restore_1.mp4" type="video/mp4">
@@ -854,16 +855,16 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
-        
+
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <img src="media/pick_restore_2.png" style="width: 85%;">
                 <div class="overlay">
                     <p><b>Initial Frame</b></p>
                 </div>
-            </div> 
+            </div>
             <div class="col justify-content-center text-center">
                 <video width="86%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="media/pick_restore_2.mp4" type="video/mp4">
@@ -871,7 +872,7 @@ pre {
                 <div class="overlay">
                     <p><b>Execution Video</b></p>
                 </div>
-            </div> 
+            </div>
         </div>
 <!--     <section id="acknowledgement"/>
         <hr>
