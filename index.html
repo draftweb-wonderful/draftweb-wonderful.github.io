@@ -423,8 +423,6 @@ pre {
             max-width: 100%;
             height: auto;
         }
-        </style>
-        <style>
         .row {
             flex-wrap: nowrap; /* Ensure items stay on a single row */
             overflow-x: auto; /* Add horizontal scroll for small screens */
@@ -437,6 +435,13 @@ pre {
             flex: 0 0 100%;
             max-width: 100%;
         }
+        /* Reduce the spacing between columns on extra small and small screens */
+        @media (max-width: 576px) {
+            .col-6, .col-sm-4 {
+                padding-left: 5px; /* Reduce left padding */
+                padding-right: 5px; /* Reduce right padding */
+            }
+        }    
         </style>
     </head>
 
