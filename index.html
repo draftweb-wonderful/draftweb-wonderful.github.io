@@ -464,28 +464,7 @@ pre {
             </figure>
             <div class="flex-row">
                 <p>
-                We propose <i>Wonderful Team</i>, a foundation model composed of different <i>expert</i> models. Each of these models is trained on different modalities of existing Internet data and jointly construct a physically executable plan to solve long-horizon tasks. 
-                </p>
-            </div>
-            <div class="flex-row">
-                <p>
-                    <b>Task Planning With Large Language Models</b> Large language models are trained on a vast amount of data on the Internet, and captures powerful semantic priors on what steps would be reasonable to take to accomplish a particular task. Given a task specified in language and the current observation, we use a pretrained LLM as a plan proposer, which outputs language subgoal decompositions to achieve a final goal.
-                </p>
-            </div>
-            <div class="flex-row">
-                <p>
-                    <b>Visual Planning With Video Models</b> Text-to-video models are trained on a vast amount of video information, and captures information about the physics of objects and the semantics of how objects should move to accomplish different tasks. We leverage text-to-video model as a visual plan proposer, which generates different plausible observation trajectories conditioned on current observation and a given subgoal. 
-                </p>
-            </div>
-            <div class="flex-row">
-                <p>
-                    <b>Action Planning Through Inverse Dynamics</b> The egocentric images on the internet images provide a powerful visual prior for inferring inverse dynamics. Our action planner uses an existing pretrained vision model on egocentric images and generates plausible different action plans to execute a visual plan. 
-                </p>
-            </div>
-            <div class="flex-row">
-                <p>
-                    <b>Iterative Refinement for Hierarchical Plan Generation</b> Given different task, visual, and action proposal models, we leverage iterative refinement as a planner to obtain a plan that satisfies constraints across all three levels of foundation models.                 </p>
-            </div>
+                We propose <i>Wonderful Team</i>, a zero-shot, single-model, multi-agent system for solving visual robotics tasks. Taking inspiration from recent advances in the multi-agent LLM literature, our system employs specialized agents to collaboratively manage different task aspects, from high-level planning to low-level execution, within a single integrated system. In particular, we develop a multi-agent LLM system wherein each agent is responsible for a separate component of task execution: including planning, object identification and location, action proposal, memory, and self-correction. 
     </section>
 
     <section id="results_overview"/>
