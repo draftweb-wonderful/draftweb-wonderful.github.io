@@ -10,29 +10,39 @@
 body {
     font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    font-size: 1rem; /* Changed to relative units */
+    font-size: 1rem; /* Relative unit */
     margin-left: auto;
     margin-right: auto;
 }
 
-@media screen and (min-width: 980px){
+@media screen and (min-width: 980px) {
     body {
-        width: 980px;
+        max-width: 980px; /* Changed to max-width for better responsiveness */
+        width: 100%; /* Ensure it takes up full width up to the max-width */
     }
 }
 
 h1 {
     font-weight: 300;
     line-height: 1.15em;
+    font-size: 2.5rem; /* Relative unit */
 }
 
 h2 {
-    font-size: 1.75em;
+    font-size: 1.75rem; /* Relative unit */
+    font-weight: 400;
+    margin: 1rem 0 0.25rem 0; /* Relative unit */
+}
+
+h3 {
+    font-weight: 600;
+    margin: 1rem 0 0.25rem 0; /* Relative unit */
 }
 
 h4 {
     font-weight: 300;
     line-height: 1.15em;
+    text-align: center;
 }
 
 a:link, a:visited {
@@ -52,27 +62,12 @@ h2, h3 {
     text-align: left;
 }
 
-h1 {
-    font-size: 2.5rem; /* Changed to relative units */
-    font-weight: 500;
-}
-
-h2 {
-    font-weight: 400;
-    margin: 16px 0 4px 0;
-}
-
-h3 {
-    font-weight: 600;
-    margin: 16px 0 4px 0;
-}
-
 .paper-title {
-    padding: 1px 0;
+    padding: 0.0625rem 0; /* Relative unit */
 }
 
 section {
-    margin: 32px 0;
+    margin: 2rem 0; /* Relative unit */
     text-align: justify;
     clear: both;
 }
@@ -103,7 +98,7 @@ section {
 }
 
 .author-row, .affil-row {
-    font-size: 1.625rem; /* Changed to relative units */
+    font-size: 1.625rem; /* Relative unit */
 }
 
 .author-row-new {
@@ -112,37 +107,37 @@ section {
 
 .author-row-new a {
     display: inline-block;
-    font-size: 1.25rem; /* Changed to relative units */
-    padding: 4px;
+    font-size: 1.25rem; /* Relative unit */
+    padding: 0.25rem; /* Relative unit */
 }
 
 .author-row-new sup {
     color: #313436;
-    font-size: 0.75rem; /* Changed to relative units */
+    font-size: 0.75rem; /* Relative unit */
 }
 
 .affiliations-new {
-    font-size: 1.125rem; /* Changed to relative units */
+    font-size: 1.125rem; /* Relative unit */
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* Relative unit */
 }
 
 .row {
-    margin: 16px 0;
+    margin: 1rem 0; /* Relative unit */
 }
 
 .authors {
-    font-size: 1.625rem; /* Changed to relative units */
+    font-size: 1.625rem; /* Relative unit */
 }
 
 .affiliatons {
-    font-size: 1.125rem; /* Changed to relative units */
+    font-size: 1.125rem; /* Relative unit */
 }
 
 .affil-row {
-    margin-top: 18px;
+    margin-top: 1.125rem; /* Relative unit */
 }
 
 .teaser {
@@ -154,23 +149,23 @@ section {
 }
 
 .screenshot {
-    width: 256px;
+    width: 16rem; /* Relative unit */
     border: 1px solid #ddd;
 }
 
 .screenshot-el {
-    margin-bottom: 16px;
+    margin-bottom: 1rem; /* Relative unit */
 }
 
 hr {
-    height: 1px;
+    height: 0.0625rem; /* Relative unit */
     border: 0;
     border-top: 1px solid #ddd;
     margin: 0;
 }
 
 .material-icons {
-    vertical-align: -6px;
+    vertical-align: -0.375rem; /* Relative unit */
 }
 
 p {
@@ -179,10 +174,10 @@ p {
 }
 
 .caption {
-    font-size: 1rem; /* Changed to relative units */
+    font-size: 1rem; /* Relative unit */
     color: #666;
-    margin-top: 4px;
-    margin-bottom: 10px;
+    margin-top: 0.25rem; /* Relative unit */
+    margin-bottom: 0.625rem; /* Relative unit */
 }
 
 video {
@@ -193,14 +188,14 @@ video {
 figure {
     display: block;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.625rem; /* Relative unit */
+    margin-bottom: 0.625rem; /* Relative unit */
 }
 
 #bibtex pre {
-    font-size: 0.875rem; /* Changed to relative units */
+    font-size: 0.875rem; /* Relative unit */
     background-color: #eee;
-    padding: 16px;
+    padding: 1rem; /* Relative unit */
 }
 
 .blue {
@@ -229,30 +224,30 @@ figure {
 
 .coming-soon {
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: -0.9375rem; /* Relative unit */
+    right: -0.9375rem; /* Relative unit */
 }
 
 .paper-btn {
     position: relative;
     text-align: center;
     display: inline-block;
-    margin: 8px;
-    padding: 8px;
+    margin: 0.5rem; /* Relative unit */
+    padding: 0.5rem; /* Relative unit */
     border-width: 0;
     outline: none;
-    border-radius: 2px;
+    border-radius: 0.125rem; /* Relative unit */
     background-color: #5364cc;
     color: white !important;
-    font-size: 1.25rem; /* Changed to relative units */
-    width: 100px;
+    font-size: 1.25rem; /* Relative unit */
+    width: 6.25rem; /* Relative unit */
     font-weight: 600;
 }
 
 .paper-btn-parent {
     display: flex;
     justify-content: center;
-    margin: 16px 0;
+    margin: 1rem 0; /* Relative unit */
 }
 
 .paper-btn:hover {
@@ -262,12 +257,12 @@ figure {
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem; /* Relative unit */
+    padding-right: 1rem; /* Relative unit */
 }
 
 .venue {
-    font-size: 1.4375rem; /* Changed to relative units */
+    font-size: 1.4375rem; /* Relative unit */
 }
 
 .topnav {
@@ -285,22 +280,22 @@ figure {
     color: black;
     text-align: center;
     vertical-align: middle;
-    padding: 16px;
+    padding: 1rem; /* Relative unit */
     text-decoration: none;
-    font-size: 1.125rem; /* Changed to relative units */
+    font-size: 1.125rem; /* Relative unit */
 }
 
 .topnav img {
-    padding: 2px 0;
+    padding: 0.125rem 0; /* Relative unit */
     width: 100%;
-    margin: 0.2em 0 0.3em 0;
+    margin: 0.2rem 0 0.3rem 0; /* Relative unit */
     vertical-align: middle;
 }
 
 pre {
-    font-size: 0.9rem; /* Changed to relative units */
-    padding: 7px;
-    border-radius: 3px;
+    font-size: 0.9rem; /* Relative unit */
+    padding: 0.4375rem; /* Relative unit */
+    border-radius: 0.1875rem; /* Relative unit */
     background-color: rgb(235, 235, 235);
     overflow-x: auto;
 }
@@ -312,12 +307,12 @@ pre {
 .prompt-box {
     border: 1px solid #ccc;
     background-color: #f5f5f5;
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.625rem; /* Relative unit */
+    margin: 1.25rem 0; /* Relative unit */
+    border-radius: 0.3125rem; /* Relative unit */
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* Relative unit */
     font-family: Arial, sans-serif;
-    font-size: 1rem; /* Changed to relative units */
+    font-size: 1rem; /* Relative unit */
 }
 
 @media only screen and (max-width: 620px) {
@@ -328,7 +323,7 @@ pre {
 
 .paper-stuff {
     width: 50%;
-    font-size: 1.25rem; /* Changed to relative units */
+    font-size: 1.25rem; /* Relative unit */
 }
 
 @media only screen and (max-width: 620px) {
@@ -345,28 +340,28 @@ pre {
     text-align: center;
     float: left;
     width: 16.666%;
-    padding: 5px;
+    padding: 0.3125rem; /* Relative unit */
 }
 
 .column3 {
     text-align: center;
     float: left;
     width: 33.333%;
-    padding: 5px;
+    padding: 0.3125rem; /* Relative unit */
 }
 
 .column4 {
     text-align: center;
     float: left;
     width: 50%;
-    padding: 5px;
+    padding: 0.3125rem; /* Relative unit */
 }
 
 .column5 {
     text-align: center;
     float: left;
     width: 20%;
-    padding: 5px;
+    padding: 0.3125rem; /* Relative unit */
 }
 
 .border-right {
@@ -390,7 +385,7 @@ pre {
 }
 
 .figure-img {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Relative unit */
     line-height: 1;
 }
 
@@ -490,7 +485,7 @@ pre {
     <section id="method"/>
         <hr>
         <h2>Method</h2>
-            <video width="800" loop autoplay muted>
+            <video style="width: 100%; height: auto;" loop autoplay muted>
                 <source src="media/wonderful_team_intro.mp4" type="video/mp4">
             </video>
             <div class="flex-row">
@@ -502,7 +497,7 @@ pre {
     <hr>
     <h2>Results Overview</h2>
         <div class="mx-auto">
-            <center><img class="card-img-top" src="media/results.png" style="width:950px"></center>
+            <center><img class="card-img-top" src="media/results.png" style="max-width: 100%; height: auto;"></center>
         </div>
         <i><center> Note that the results presented here are based on a selection of VIMABench tasks. For more information, please refer to the paper.</center></i>
     </section>
